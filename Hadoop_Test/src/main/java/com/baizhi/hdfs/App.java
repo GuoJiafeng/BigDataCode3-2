@@ -5,7 +5,6 @@ import org.apache.hadoop.fs.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class App {
     FileSystem fileSystem;
@@ -18,8 +17,8 @@ public class App {
         // System.setProperty("HADOOP_USER_NAME", "root");
 
          configuration = new Configuration();
-        configuration.addResource("core-site.xml");
-        configuration.addResource("hdfs-site.xml");
+        configuration.addResource("conf1/core-site.xml");
+        configuration.addResource("conf1/hdfs-site.xml");
 
 
         fileSystem = FileSystem.newInstance(configuration);
